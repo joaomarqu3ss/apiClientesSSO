@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .              # Caminho onde está o Dockerfile
+      dockerfile: Dockerfile  # Nome do Dockerfile (padrão, pode ser omitido)
+    container_name: ssousuario-app
+    ports:
+      - "8081:8081"           # Altere se sua aplicação usar outra porta
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:16
+    container_name: ssousuario-postgres
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: ssousuario_db
+      POSTGRES_USER: ssousuario_user
+      POSTGRES_PASSWORD: ssousuario_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge
