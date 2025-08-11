@@ -1,8 +1,7 @@
 📝 Desafio Técnico: API Gerenciamento de Clientes
 -
----
 ## Objetivo
-Esta é uma API REST desenvolvida com Spring Boot para gerenciamento de clientes por usuário. O acesso aos recursos é protegido por um mecanismo de autenticação via filters, garantindo que apenas usuários autenticados possam interagir com os endpoints. O projeto utiliza Java 21, possui tratamento de exceções personalizadas, geração de logs estruturados e está preparado para fácil integração com front‑ends ou outros serviços.
+Esta é uma API REST desenvolvida com Spring Boot para gerenciamento de clientes por usuário. O acesso aos recursos é protegido por um mecanismo de autenticação via filters, garantindo que apenas usuários autenticados possam interagir com os endpoints. O projeto utiliza Java 21, possui tratamento de exceções personalizadas e está preparado para fácil integração com front‑ends ou outros serviços.
 
 ---
 
